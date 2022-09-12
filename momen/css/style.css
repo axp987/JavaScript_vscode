@@ -1,0 +1,17 @@
+body {
+    background-color: beige;   
+}
+
+.hidden {
+    display: none;
+}
+
+div.mid {
+    text-align: center;
+    color:blueviolet;
+}
+
+img {
+    height: 13cm;
+    width: 13cm;
+}
