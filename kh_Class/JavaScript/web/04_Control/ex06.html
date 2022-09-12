@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        /*
+            switch~case조건문
+            - 다중 if~else문과 유사한 구조
+            - 다중 if~else문을 switch~case으로 변경 가능
+            조건식이 특정값과 동등연산자(==) 경우 변경 할 수있음
+            - 즉, 조건식이 == 인 경우를 제외하고는 switch~case문으로 변경할 수 없음
+        */
+        let site = prompt("네이버, 다음, 구글 중 자주 사용하는 포털사이트는?");
+
+        switch(site) {
+            case "네이버" :
+                url  = "www.naver.com";
+                break;
+            case "다음" :
+                url = "www.daum.net";
+                break;
+            case "구글" :
+                url = "www.google.com";
+                break;
+            default :
+                alert("보기 중에는 없는 사이트 입니다.");
+        }
+
+        if(url) {
+            //실제로 페이지로 이동이 진행되는 명령어.
+            location.href="http://" + url;
+        }else {
+            // 현재 페이지를 새로 고침하는 기능
+            location.reload();
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>]
+</html>

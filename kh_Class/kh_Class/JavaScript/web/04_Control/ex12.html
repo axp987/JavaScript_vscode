@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script tpye="text/javascript">
+        /*
+
+            [문제1]
+            1   2   3   4   5
+            6   7   8   9   10
+            11  12  13  14  15
+            16  17  18  19  20
+            21  22  23  24  25
+            [문제2] 테이블에 데이터를 넣어서 다음과 같이 출력해 보세요.
+
+            1   6   11  16  21
+            2   7   12  17  22
+            3   8   13  18  23
+            4   9   14  19  24
+            5   10  15  20  25
+        */
+        var q1 = 1;
+        document.write("<table border> <tr>");
+        for(q1; q1<26; q1++) {
+            if(q1 % 5 == 0) {
+                document.write("<td>" + q1 + "</td></tr>");
+            }
+            else {
+                document.write("<td>" + q1 + "</td>");
+            }
+        }
+        document.write("</tr></table>");
+        document.write("<hr>");
+        document.write("<hr>");
+
+        document.write("<table border='1' cellspacing='0'");
+        for(let i=0; i<6; i++) {
+            for(let j=1; j<5; j=i++) {
+                document.write("<tr>");
+                for(let j=0; j<5; j++) {
+                    document.write("<td align='right'>"+ (j*5+i) + "</td>");
+                }
+                document.write("</tr>");
+            }
+        }
+        document.write("</table>")
+
+
+    </script>
+</head>
+<body>
+</body>
+</html>

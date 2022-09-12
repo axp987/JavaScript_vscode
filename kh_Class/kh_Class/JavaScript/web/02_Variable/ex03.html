@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        /*
+            [문제] 키보드로 두 수를 입력받아서 덧셈, 뺄셈, 곱셈, 나눗셈 작섭을 진행
+            document.write() 함수를 이용하여 출력
+            주의) double형으로 변환 후 나눗셈 작업 진행 하여야함
+        */
+
+        const num1 = parseInt(prompt("첫번째 숫자를 입력하세요."));
+        const num2 = Number(prompt("두번째 숫자를 입력하세요."));
+        
+        document.write(num1 + num2);
+        document.write("<br>" + (num1 - num2));
+        document.write("<br>" + num1 * num2);
+        document.write("<br>" + (num1 / num2).toFixed(3));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
