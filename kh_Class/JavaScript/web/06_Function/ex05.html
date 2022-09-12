@@ -9,9 +9,10 @@
         // 콜백함수
         // 함수 호출 시 매개변수로 넘어가는 값이 함수일 때
 
-        function callTenTimes(call) {
+        //function callTenTimes(call)
+        function callTenTimes() {
             for(let i=1; i<=10; i++) {
-                document.write(i);
+                call();
             } 
         }
 
@@ -19,7 +20,7 @@
             alert("함수 호출!!");
         }
 
-        callTenTimes(call);
+        callTenTimes();
      </script>
 </head>
 <body>
