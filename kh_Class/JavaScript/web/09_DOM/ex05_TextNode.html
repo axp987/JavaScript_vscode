@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        onload = function() {
+            
+
+            // 1. h2 태그 만들기
+            const h_el = document.createElement("h2");
+            // 1-1. h2 태그의 텍스트 노드
+            const h_text = document.createTextNode("제목");
+
+            // 2. p 태그 만들기
+            const p_el = document.createElement("p");
+            // 2-1. p의 텍스트 노드
+            const p_text = document.createTextNode("본문");
+            
+            // 텍스트 노드 값을 태그에 추가
+            h_el.appendChild(h_text);
+            p_el.appendChild(p_text);
+            
+            p_el.setAttribute("id", "hp");
+
+            // 1, 2의 태그를 body에 추가
+            document.body.appendChild(h_el);
+            document.body.appendChild(p_el);
+        }
+    </script>
+    <style type="stylesheet">
+        #hp {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

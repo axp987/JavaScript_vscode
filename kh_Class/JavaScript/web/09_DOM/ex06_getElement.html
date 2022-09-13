@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        
+        // querySelector은 id, class 다양하게 사용 가능
+        //css 선택자로 많이 사용
+        // const header1 = document.querySelector("header1"); 
+        // const header2 = document.querySelector("header2"); 
+        onload = function() {
+            // 문서에서 요소를 찾는 방법 - 3가지
+            // 1. getElementById("id이름")
+            //      ==> 문서에서 특정 아이디를 가진 노드를 찾기
+            //      ==> id 속성값만을 사용할 수 있다.
+            const header1 = document.getElementById("header1"); // dom방식
+            const header2 = document.getElementById("header2");
+
+            // 객체의 속성(텍스트노드)을 변경해 보자
+            // innerHTML: 아이디의 텍스트 노드를 변경하는 속성
+            header1.innerHTML = "header1을 변경합니다.";
+            header2.innerHTML = "header2을 변경합니다.";
+        }
+    </script>
+</head>
+<body>
+    <h1 id="header1">Header1</h1>
+    <p id="header2">header2</p>
+</body>
+</html>
