@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex14</title>
+    <script type="text/javascript">
+        function go_div() {
+            const div = document.getElementById("class");
+            div.innerHTML = "요소의 텍스트가 변경되었습니다.";
+            div.style.color = "red";
+        }
+    </script>
+</head>
+<body>
+    <!--
+        [문제] 해당 글자를 클릭하면 "요소의 텍스트가 변경되었습니다." 라는 글자로
+        변경이 되도록 하고, 글자의 색상도 빨간색으로 나타나도록 DOM으로 처리해 보세요.
+    -->
+    <div id="class" onclick="go_div()">
+        이것이 div 요소입니다.
+    </div>
+
+</body>
+</html>
