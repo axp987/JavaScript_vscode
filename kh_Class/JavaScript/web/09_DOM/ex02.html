@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        // onload = body 태그를 먼저 읽고 쟈스를 실행하라는 의미
+        onload = function() { // 무명함수
+            // 요소(태그)를 만드는 방법
+            // 형식) createElement(tagName);
+            // 형식) createTextNode(text);
+
+          
+            // 1. 요소(태그)를 만들어 보자.
+            const h1_el = document.createElement("h1");
+            const text = document.createTextNode("Hello... DOM");
+            // 2. 텍스트노드를 h1 노드의 자식노드로 추가
+            h1_el.appendChild(text);
+            
+            // 3. h1 태그를 문서의 body태그에 추가해 주어야 함
+            document.body.appendChild(h1_el);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
