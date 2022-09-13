@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+       /*
+            BOM(Browser Object Model): 브라우저 객체 모듈
+                - 자바스크립트가 브라우저와 소통하기 위해 만들어진 모델
+                - BOM 객체의 최상위 내장 객체는 Window 객체
+
+            * window 객체의 주요 함수
+                - open()
+                    ==> 새로운 창을 띄우고자 할 때 사용하는 함수
+                - alert()
+                    ==> 알림/경고 창을 띄울 때 사용하는 함수
+                - prompt()
+                    ==> 질의 창을 띄울 때 사용하는 함수
+                - confirm()
+                    ==> 확인/취소 팝업
+                - moveTo()
+                    ==> 창의 위치를 이동시킬 때 사용
+                - resizeTo()
+                    ==> 창의 크기 변경시 사용
+                - setInterval()
+                    ==> 일정 간격으로 반복 실행
+                - setTimeout()
+                    ==> 일정 간격으로 한 번 실행
+            
+            * screen 객체
+                ==> 사용자의 모니터 정보(속성)를 제공해 주는 객체
+
+                screen 객체의 주요 속성
+                - screen.width
+                ==> 화면의 너비값 반환
+                - screen.height
+                ==> 화면의 높이값 반환
+                - screen.availWidth
+                ==> 작업표시줄을 제외한 화면의 너비값 반환
+                - screen.availHeight
+                ==> 작업표시줄을 제외한 화면의 높이값 반환
+                - screen.colorDepth
+                ==> 모니터가 표현 가능한 color를 bit값으로 반환
+       */
+
+       console.log("화면 너비: " + screen.width);
+       console.log("화면 높이: " + screen.height);
+       console.log("작업표시줄 없는 너비값: " + screen.availWidth);
+       console.log("작업표시줄 없는 너비값: " + screen.availHeight);
+       console.log("표현 가능한 color 값: " + screen.colorDepth);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
