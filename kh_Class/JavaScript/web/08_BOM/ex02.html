@@ -8,13 +8,22 @@
     <script type="text/javascript">
         /*
             location 객체
-
-            
+                - 자바스크립트가 실행되고 있는 현재 브라우저의 주소 창에
+                표시된 주소 값에 관련된 내용을 다루는 객체
+                - 사용자 브라우저의 주소 창의 url에 대한 정보(속성)와
+                새로고침 기능을 제공해 주는 객체
+                - location 객체의 주요 속성 및 함수
+                    * location.href
+                        ==> url 값을 반환하는 속성
+                    * location.reload()
+                        ==> 새로고침이 일어나게 하는 속성
         */
+       console.log("url 정보: " + location.href);
+        
     </script>
 
 </head>
 <body>
-    
+    <button id = "b1" value="새로고침">새로고침</button>
 </body>
 </html>
