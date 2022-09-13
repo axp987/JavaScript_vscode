@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        /*
+            문서에서 요소를 찾는 방법 - 3번째
+            3. getElementsByClassName(tagName) // class 가져옴
+            ==> tagName과 일치하는 요소를 배열로 가져오는 함수
+        */
+        
+       onload = function() {
+            const texts = document.getElementsByClassName("text");
+            console.log("texts 요소 count : " + texts.length);
+            for(let i=0; i<texts.length; i++) {
+                texts[i].innerHTML = "text["+i+"]";
+            }
+        }
+
+
+    </script>
+</head>
+<body>
+
+    <h1 id="header1">Header1</h1>
+    <h1 id="header2">Header2</h1>
+    <hr>
+    <h1>Header1</h1>
+    <p class="text">header1 내용</p>
+    <hr>
+    <h1>Header1</h1>
+    <p class="text">header1 내용</p>
+
+</body>
+</html>

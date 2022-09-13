@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        onload = function() {
+            // 문서의 요소를 찾는 방법
+            // querySelector(선택자)를 이용하는 방법
+            // 1. querySelector(선택자)
+            // ==> 가장 처음 선택되는 문서의 선택자 요소를 가져오는 함수
+
+            // 2. querySelectorAll(선택자)
+            // ==> 문서의 선택자 요소 전체를 가져오는 함수(배열 저장)
+            
+            const header1 = document.querySelector("#header1");
+
+            header1.innerHTML = "querySelector로 선택된 선택자";
+
+            const pTags = document.querySelectorAll(".text");
+            for(let i=0; i<pTags.length; i++) {
+                pTags[i].innerHTML = "querySelectorAll()로 선택된 선택자";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1 id="header1">Header1</h1>
+    <h1 id="header2">Header2</h1>
+    <hr>
+    <h1>Header1</h1>
+    <p class="text">header1 내용</p>
+    <hr>
+    <h1>Header1</h1>
+    <p class="text">header1 내용</p>
+</body>
+</html>
