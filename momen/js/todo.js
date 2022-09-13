@@ -55,6 +55,3 @@ if(savedToDos !== null) { // toDos에 저장된 값을 다른식으로 출력 //
 }
 
 todoForm.addEventListener("submit", handleSubmit);
-
-
-
