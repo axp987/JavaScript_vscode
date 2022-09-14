@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        // 다중 if~else 조건문
+        /*
+            [문제] 다중 if~else문을 이용하여 성적을 화면에 출력
+            키보드로 이름, 국어, 영어, 수학, 자바 점수를 총점, 평균, 학점 출력
+        */
+     
+       while(true) {
+           const name = prompt("이름을 입력하세요.");
+           if(name == null) {
+                alert("이름을 입력해주세요.");   
+                continue;
+           }
+           else if(kor == null) {
+                alert("국어 점수를 입력해주세요.");
+                continue;
+           }
+           else if(eng == null) {
+                alert("영어 점수를 입력해주세요.");
+                continue;
+           }
+           else if(math == null) {
+                alert("수학 점수를 입력해주세요.");
+                continue;
+           }
+           else if(java == null) {
+                alert("자바 점수를 입력해주세요.");
+                continue;
+           }
+       }
+
+       let tot = kor + eng + mat + java;
+       let avg = tot / 4;
+       let grade;
+
+       if(avg >= 90) {
+          grade = "A학점";
+       } else if(avg >= 80) {
+          grade = "B학점";
+       } else if(avg >= 70) {
+          grade = "C학점";
+       } else {
+          grade = "F학점";
+       }
+
+       document.write(grade);
+       
+       
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

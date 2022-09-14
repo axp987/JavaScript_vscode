@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        // 대입(배정) 연산자, 산술연산자( +, -, *, /, %)
+        let num1 = 15;
+        let num2 = 4;
+        let result;
+
+        result = num1 + num2;
+        document.write(num1 + " + " + num2 + " = " + result + "<br>");
+
+        result = num1 - num2;
+        document.write(num1 + " - " + num2 + " = " + result + "<br>");
+
+        result = num1 * num2;
+        document.write(num1 + " * " + num2 + " = " + result + "<br>");
+
+        result = num1 / num2;
+        document.write(num1 + " / " + num2 + " = " + result + "<br>");
+
+        result = num1 % num2;
+        document.write(num1 + " % " + num2 + " = " + result + "<br>");
+
+        document.write("<hr>");
+
+        let tab = "<table border='1' cellspacing='0'>";
+            tab += "<tr>";
+            tab += "<th>" + num1 + " + " + num2 + "</th>";
+            tab += "<td>" + (num1 + num2) + "</td>";
+            tab += "</tr>";
+
+            tab += "<tr>";
+            tab += "<th>" + num1 + " - " + num2 + "</th>";
+            tab += "<td>" + (num1 - num2) + "</td>";
+            tab += "</tr>";
+
+            tab += "<tr>";
+            tab += "<th>" + num1 + " * " + num2 + "</th>";
+            tab += "<td>" + (num1 * num2) + "</td>";
+            tab += "</tr>";
+
+            tab += "<tr>";
+            tab += "<th>" + num1 + " / " + num2 + "</th>";
+            tab += "<td>" + (num1 / num2) + "</td>";
+            tab += "</tr>";
+
+            tab += "<tr>";
+            tab += "<th>" + num1 + " % " + num2 + "</th>";
+            tab += "<td>" + (num1 % num2) + "</td>";
+            tab += "</tr>";
+            tab += "</tr></table>";
+            
+            document.write(tab);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

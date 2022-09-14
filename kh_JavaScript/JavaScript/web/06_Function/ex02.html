@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        /*
+            [문제] 키보드로 두 수와 연산자를 입력받아서 연산자에 해당하는 함수를 호출하여 연산 결과를 화면에
+            출력하는 코드를 작성해 보세요.
+        */
+        const num1 = Number(prompt("첫번째 숫자를 입력하세요."));
+        const g = prompt("연산자를 입력하세요.");
+        const num2 = Number(prompt("두번째 숫자를 입력하세요."));
+
+        function plus(su1, su2) {
+            document.write("덧셈 >>>" + (su1 + su2) + "<br>");
+        }
+        function minus(su1, su2) {
+            document.write("뺄셈 >>>" + (su1 - su2) + "<br>");
+        }
+        function mul(su1, su2) {
+            document.write("곱하기 >>>" + (su1 * su2) + "<br>");
+        }
+        function div(su1, su2) {
+            document.write("나눗셈 >>>" + (su1 / su2) + "<br>");
+        }
+        function mod(su1, su2) {
+            document.write("나머지 >>>" + (su1 % su2) + "<br>");
+        }
+
+        function num() {
+            switch(g) {
+                case '+':
+                    plus(num1, num2);
+                    document.write(num1 + num2);
+                    break;
+                case '-':
+                    minus(num1, num2);
+                     document.write(num1 + num2);
+                     break;
+                case '*':
+                    mul(num1, num2);
+                     document.write(num1 * num2);
+                     break;
+                case "/":
+                    div(num1 / num2);
+                    document.write(num1 / num2);
+                    break;
+                case "%":
+                    mod(num1 % num2);
+                    document.write(num1 % num2);    
+                    break;
+                default:
+                    alert("잘못된 연산자를 입력하였습니다.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="button" id="b1" onclick="num()" value="계산">
+    
+</body>
+</html>

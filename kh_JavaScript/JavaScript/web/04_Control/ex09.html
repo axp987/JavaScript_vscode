@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        /*
+            [문제] 1~100 사이의 숫자 중에서 숫자가 4의 배수 이면서 동시에 6의 배수인 숫자를 화면에 보여주세요
+            조건) while반복문 이용
+        */
+        let i = 0;
+        while(i < 100) {
+            if(i % 6 == 0 && i % 4 == 0) {
+                console.log(i);
+            }
+            i++;
+        }
+
+        /*
+            [문제] 1~100 사이의 숫자 중에서 홀수인 경우에는 글자색을 빨간색, 짝수인 경우에는 글자를 파란색
+        */
+       let j = 0;
+       while(j < 100) {
+
+            document.write("<div style: nth-chile(odd); color:red'>" + j + "</div>");
+            // document.write("<div style='nth-chile(even); color:blue'>" + j + "</div>");
+            // if(j % 2 == 0) {
+            //     document.write("<div style='color:blue'>" + j + "</div>");
+            // }
+            // else {
+            //     document.write("<div style='color:red'>" + j + "</div>");
+            // }
+
+            j++;
+       }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
