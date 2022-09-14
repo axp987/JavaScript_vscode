@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        /*
+            [문제] 문서에서 id="header"와 id="footer"
+            노드를 찾아서 테두리 선을 다음과 같이 적용하여 화면에 보여주세요
+            if = "header" ==> 테두리선 : 3px solid red;
+            if = "footer" ==> 테두리선 : 3px solid blue;
+        */
+       onload = function() {
+           const header = document.querySelector("#header");
+           const footer = document.getElementById("footer");
+           header.style.border = "3px solid red";
+           footer.style.border = "3px solid blue";
+       }
+
+    </script>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div id="sample_page" class = "page">
+        샘플 페이지(div id = "sample_page" class="page")
+        <div id="header">
+            헤더 영역(div id="header")
+        </div> <!-- id="header" end-->
+
+        <div id="content" class = "sample_content">
+            콘텐트 영역(id="content" class="sample_content")
+            <div>
+                javascript란(div)
+                <p id="data_1">자바스크립트 Core(p, id="data_1")</p>
+                <p id="data_2">자바스크립트 BOM(p, id="data_2")</p>
+                <p id="data_3">자바스크립트 DOM(p, id="data_3")</p>
+                을 배운다는 것
+            </div>
+
+            <div class="content_data">
+                javascript에서 배울 내용(div class = "content")
+                <p>1. javascript BOM(p)</p>
+                <p>2. javascript DOM(p)</p>
+            </div> <!-- class = "content_data" end-->
+        </div> <!-- id="content" class = "sample_content" -->
+        <div id="footer">
+            footer 영역(div, id="footer")
+        </div><!-- id="footer" end -->
+    </div> <!-- id="sample_page" end -->
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="text/javascript">
+        // 노드를 이동시키는 방법
+        onload = function() {
+            
+            // 1. 이동시킬 노드를 우선적으로 찾아야 합니다.
+            const header = document.getElementById("header");
+            
+            // 2. 이동될 노드를 찾아야 한다.
+            const content = document.getElementById("content");
+            
+            
+            // 3. header 노드를 content 노드의 자식노드로 변경을 해 보자.
+            content.appendChild(header);
+
+            header.style.border = "3px solid red";
+
+        }
+    </script>
+</head>
+<body>
+    <div id="sample_page" class = "page">
+        샘플 페이지(div id = "sample_page" class="page")
+        <div id="header">
+            헤더 영역(div id="header")
+        </div> <!-- id="header" end-->
+
+        <div id="content" class = "sample_content">
+            콘텐트 영역(id="content" class="sample_content")
+            <div>
+                javascript란(div)
+                <p id="data_1">자바스크립트 Core(p, id="data_1")</p>
+                <p id="data_2">자바스크립트 BOM(p, id="data_2")</p>
+                <p id="data_3">자바스크립트 DOM(p, id="data_3")</p>
+                을 배운다는 것
+            </div>
+
+            <div class="content_data">
+                javascript에서 배울 내용(div class = "content")
+                <p>1. javascript BOM(p)</p>
+                <p>2. javascript DOM(p)</p>
+            </div> <!-- class = "content_data" end-->
+        </div> <!-- id="content" class = "sample_content" -->
+        <div id="footer">
+            footer 영역(div, id="footer")
+        </div><!-- id="footer" end -->
+    </div> <!-- id="sample_page" end -->
+</body>
+</html>

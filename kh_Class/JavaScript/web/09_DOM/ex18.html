@@ -11,18 +11,18 @@
         let id; // 전역변수
 
         function change_go() {
-            id = setInterval(flashText(), 1000)
+            id = setInterval(flashText, 1000);
         }
 
         function flashText() {
             let target = document.getElementById("target");
-            target.style.color = 
-                (tartget.style.color == "red") ? "blue" : "red";
+            target.style.color = ((target.style.color == "red") ? "blue" : "red");
         }
 
         function stop_go() {
             clearInterval(id);
         }
+
     </script>
 </head>
 <body>
@@ -30,7 +30,7 @@
         <p>여기는 텍스트 영역입니다....</p>
     </div>
     <hr>
-    <input type="button" value = "시작" onclick="change_go()">
+    <input type="button" id="target" value = "시작" onclick="change_go()">
     <input type="button" value="종료" onclick="stop_go()">
 </body>
 </html>

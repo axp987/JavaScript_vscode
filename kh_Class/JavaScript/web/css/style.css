@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+body {
+    font-size: 16px;
+    font-family: 굴림;
+}
+
+div, p {
+    border: 2px solid #D5D5D5;
+    margin: 10px;
+}

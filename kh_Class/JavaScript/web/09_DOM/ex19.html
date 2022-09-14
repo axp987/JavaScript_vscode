@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function check() {
+            let userId = document.getElementById("id");
+            let userPwd = document.getElementById("pwd");
+            let userName = document.getElementById("name");
+            let userPhone = document.getElementById("phone");
+            let userAddr = document.getElementById("addr");
+
+            if(userId.value == "") {
+                alert("아이디를 입력하세요....");
+                userId.focus();
+                return false; // 데이터 전송이 차단됨.
+            }
+            else if(userPwd.value == "") {
+                alert("패스워드를 입력하세요....");
+                userPwd.focus();
+                return false; // 데이터 전송이 차단됨.
+            }
+            else if(userName.value == "") {
+                alert("이름을 입력하세요....");
+                userName.focus();
+                return false; // 데이터 전송이 차단됨.
+            }
+            else if(userPhone.value == "") {
+                alert("연락처를 입력하세요....");
+                userPhone.focus();
+                return false; // 데이터 전송이 차단됨.
+            }
+            else if(userAddr.value == "") {
+                alert("주소를 입력하세요....");
+                userAddr.focus();
+                return false; // 데이터 전송이 차단됨.
+            }
+            else {
+                
+            }
+        }
+    </script>
+</head>
+<body>
+    <div align = "center">
+        <form action = "http://www.google.com" onsubmit="return check()">
+            <table border = "1" cellspacing = "0">
+                <tr>
+                    <th>아이디</th>
+                    <td> <input type="text" id="id"></td>
+                </tr>
+                <tr>
+                    <th>비밀번호</th>
+                    <td> <input type="password" id="pwd"></td>
+                </tr>
+                <tr>
+                    <th>이  름</th>
+                    <td><input type="text" id="name"></td>
+                </tr>
+                <tr>
+                    <th>연락처</th>
+                    <td><input type="text" id="phone"></td>
+                </tr>
+                <tr>
+                    <th>주소</th>
+                    <td><input type="text" id="addr"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" value = "회원가입">
+                        &nbsp;&nbsp;&nbsp;
+                        <input type="reset" value = "다시작성">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
