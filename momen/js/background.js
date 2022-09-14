@@ -1,5 +1,5 @@
 
-const images = ["IMG_9430.jpeg", "IMG_R_1019.png", "IMG_R_1020.png"];
+const images = ["IMG_94301.jpeg", "IMG_R_10191.png", "IMG_R_10201.png"];
 
 const chocenImages = images[Math.floor(Math.random() * images.length)];
 
