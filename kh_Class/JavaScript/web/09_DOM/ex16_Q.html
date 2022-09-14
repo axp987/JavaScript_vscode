@@ -7,12 +7,24 @@
     <title>Document</title>
     <script type="text/javascript">
         onload = function() {
-            const p = document.createElement("p");
-            const text = document.createTextNode("안녕하세요");
-            const div = document.getElementById("myDiv");
-            p.appendChild(text); // <p>에 안녕하세요를 추가
+            // const p = document.createElement("p");
+            // const text = document.createTextNode("안녕하세요");
+            // const div = document.getElementById("myDiv");
+            // p.appendChild(text); // <p>에 안녕하세요를 추가
 
-            div.appendChild(p).style.color="red";
+            // div.appendChild(p).style.color="red";
+
+            // p 태그 생성
+            const p = document.createElement("p");
+
+            // p 태그에 들어갈 텍스트 노드 생성
+            const text = document.createTextNode("안녕하세요.");
+            
+            // 텍스트 노드를 p태그에 추가
+            p.appendChild(text);
+
+            const div = document.getElementById("myDiv");
+            div.appendChild(p).style.color="red";    
         }
     </script>
 </head>

@@ -7,13 +7,22 @@
     <title>ex15</title>
     <script type="text/javascript">
         onload = function() {
-            const p = document.createElement("p");
-            const text = document.createTextNode("DOM을 이용한 P 태그");
-            const hr = document.createElement("hr");
+            // const p = document.createElement("p");
+            // const text = document.createTextNode("DOM을 이용한 P 태그");
+            // const hr = document.createElement("hr");
 
-            p.appendChild(text);
-            document.body.appendChild(p);
-            document.body.appendChild(hr);
+            // p.appendChild(text);
+            // document.body.appendChild(p);
+            // document.body.appendChild(hr);
+
+            let p_el = document.createElement("p");
+            const text = document.createTextNode("DOM을 이용한 p 태그");
+
+            let hr_el = document.createElement("hr");
+            hr_el.setAttribute("title", "DOM을 이용한 수평선");
+            //????????????????
+            document.body.appendChild(p_el);
+            document.body.appendChild(hr_el);
         }
     </script>
 </head>

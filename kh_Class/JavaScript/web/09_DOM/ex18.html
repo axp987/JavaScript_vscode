@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        // 일정한 시간마다 주기적으로 특정한 함수를 호출
+        // setInterval(호출할 함수 이름, 시간(ms))
+        let id; // 전역변수
+
+        function change_go() {
+            id = setInterval(flashText(), 1000)
+        }
+
+        function flashText() {
+            let target = document.getElementById("target");
+            target.style.color = 
+                (tartget.style.color == "red") ? "blue" : "red";
+        }
+
+        function stop_go() {
+            clearInterval(id);
+        }
+    </script>
+</head>
+<body>
+    <div id="target">
+        <p>여기는 텍스트 영역입니다....</p>
+    </div>
+    <hr>
+    <input type="button" value = "시작" onclick="change_go()">
+    <input type="button" value="종료" onclick="stop_go()">
+</body>
+</html>
