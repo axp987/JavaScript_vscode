@@ -9,23 +9,23 @@
     <script type="text/javascript">
 
         /*
-            위치 탐색 선택자
-            >> 0부터 시작이니까
-            3. 짝수번째(홀수 인덱스) 요소 선택자
-                : 전체 요소 중에서 짝수 번째 요소 선택자
-                형식) $("요소선택: odd") or $("요소선택").odd()
-
-            4. 홀수번째(짝수 인덱스) 요소 선택자
-                : 전체 요소 중에서 홀수 번쨰 요소 선택자
-                형식) $("요소선택: even") or $("요소선택").even()
+          탐색 선택자 ==> 0부터 시작이다.
+            1. eq(index) 선택자 
+                ==> 지정한 인덱스가 참조하는 요소만 선택하는 선택자
+            2. lt(index) 선택자
+                ==> 지정한 인덱스 보다 작은(less then) 요소만
+                    선택하는 선택자.
+            3. gt(index) 선택자
+                ==> 지정한 인덱스 보다 큰(grater then)
         */
 
         $(function() {
-            // $(".menu li:even").css("background-color", "#fff");
-            // $(".menu li:odd").css("background-color", "lightgray");
-
-            $(".menu li").even().css("background-color", "#fff");
-            $(".menu li").odd().css("background-color", "lightgray");
+            // x == 4
+           $("ul li:eq(3)").css("background-color", "pink");
+            // x < 4
+           $("ul li:lt(3)").css("background-color", "yellow");
+            // x > 4
+           $("ul li:gt(3)").css("background-color", "skyblue");
         });
     </script>
 </head>

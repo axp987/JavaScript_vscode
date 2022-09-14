@@ -9,23 +9,22 @@
     <script type="text/javascript">
 
         /*
-            위치 탐색 선택자
-            >> 0부터 시작이니까
-            3. 짝수번째(홀수 인덱스) 요소 선택자
-                : 전체 요소 중에서 짝수 번째 요소 선택자
-                형식) $("요소선택: odd") or $("요소선택").odd()
-
-            4. 홀수번째(짝수 인덱스) 요소 선택자
-                : 전체 요소 중에서 홀수 번쨰 요소 선택자
-                형식) $("요소선택: even") or $("요소선택").even()
+          위치 탐색 선택자
+          5. 전체 요소 중 특정 숫자 번째 요소만 선택하는 선택자.
+            형식) $("요소선택: nth-child(숫자)")
+          6. 전체 요소 중 특정 배수의 요소만 선택하는 선택자
+            형식) $("요소선택: nth-child(숫자n)")
         */
 
         $(function() {
-            // $(".menu li:even").css("background-color", "#fff");
-            // $(".menu li:odd").css("background-color", "lightgray");
+            $(".menu li:nth-child(2)").css("color", "red");
 
-            $(".menu li").even().css("background-color", "#fff");
-            $(".menu li").odd().css("background-color", "lightgray");
+            $(".menu li:nth-child(3n)").css("background-color", "lightgray");
+
+            $(".menu li:nth-child(3n+1)").css("background-color", "skyblue");
+            // 3으로 나눈 나머지가 1인 경우?
+            $(".menu li:nth-child(3n+2)").css("background-color", "yellow");
+
         });
     </script>
 </head>
