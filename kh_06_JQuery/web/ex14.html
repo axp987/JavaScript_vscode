@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../JS/jquery-3.6.1.js"></script>
+    <script type="text/javascript">
+        $(function() {
+          // 형제(다음) 요소들! 선택자: $("요소선택").nextAll()
+          $(".content").nextAll().css("border", "2px solid red")
+                            .css("color", "blue");
+            
+        });
+    </script>
+</head>
+<body>
+    <h2>인접 관계 선택자</h2>
+    <ul class="wrap">
+        <li>내용1</li>
+        <ul>
+            <li class="content">내용2</li>
+            <li>내용3</li>
+        </ul>
+        <li>내용4</li>
+    </ul>
+</body>
+</html>
