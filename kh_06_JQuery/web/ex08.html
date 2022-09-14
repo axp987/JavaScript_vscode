@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../JS/jquery-3.6.1.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            // 인접 관계 선택자
+            // 2-1. 부모 선택자: $("요소선택자").parent()
+            $(".second").parent()
+                        .css("border", "2px solid red")
+                        .css("background-color", "yellow");
+            });
+    </script>
+</head>
+<body>
+    <h2>인정 관계 선택자</h2>
+    <ul>
+        <li>내용1</li>
+        <ul>
+            <li>내용2</li>
+            <li class="second">내용3</li>
+        </ul>
+        <li>내용4</li>
+    </ul>
+        
+</body>
+</html>
