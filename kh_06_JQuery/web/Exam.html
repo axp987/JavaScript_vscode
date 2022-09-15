@@ -9,16 +9,61 @@
     <script type="text/javascript">
         $(function() {
             // 초기값 설정
-            let size = 14; // 최초 글자 크기 선언
-
+            let size; // 최초 글자 크기 선언
+            
             // 초기 글자크기 설정
-            $("#txt_wrap").css("font-size", size);
-            $(".it").val(size);
+            if(localStorage.getItem("localsize") == null) {
+                size = 14;
+                $(".it").val(size);
+                $("#txt_wrap").css("font-size", size);
+                localStorage.setItem("localsize", size);
+                console.log(typeof size);
+            }
+            else {
+                $(".it").val(localStorage.getItem("localsize"));
+                size = localStorage.getItem("localsize");
+                console.log(typeof size);
+                $("#txt_wrap").css("font-size", parseInt(size));
+            }
+            
             
             // 1. 글자체를 선택했을 때 이벤트 처리
-            $("#fs").on("change", function() {
-                $("#txt_wrap").css("font-family", $(this).val())
-            });
+            // $("#fs").on("change", function() {
+            //     if(localStorage.getItem("family") == null) {
+            //         $("#txt_wrap").css("font-family", $(this).val());
+            //         //localStorage.setItem("family", $(this).val());
+            //         localStorage.setItem("family", $("#fs option:selected").text());
+
+            //         //font-family: GungsuChe, '궁서체', san-serif;
+            //     }
+            //     else {
+            //         //$("#txt_wrap").css("font-family", localStorage.getItem("family"));
+            //         localStorage.setItem("family", $("#fs option:selected").text());
+            //         $("fs").on("change", function() {
+            //             $(this).text(localStorage.getItem("family"));
+            //         });
+                    
+            //         //localStorage.setItem("family", $(this).val());
+                    
+            //     }
+            // });
+            if(localStorage.getItem("family") == null) {
+                    
+                $("#fs").on("change", function() {
+                    $("#txt_wrap").css("font-family", $(this).val());
+                    localStorage.setItem("family", $("#fs option:selected").text());
+                });
+            }
+            else {
+                $("#fs").on("change", function() {
+
+                });
+                //$("#fs option:selected").val(localStorage.getItem("family"));
+            } 
+
+            
+
+
 
             // 2. 글자크기 버튼을 클릭시 이벤트 발생
             $(".zoom button").on("click", function() {
@@ -29,14 +74,30 @@
                 $("btn_index")
 
                 if(btn_index == 0) { // + 버튼
-                    size++;
-                    $("#txt_wrap").css("font-size", size + "px");
-                } else if (btn_index == 2) { // - 버튼
                     size--;
-                    $("#txt_wrap").css("font-size", size + "px");                    
+                    $("#txt_wrap").css("font-size", size + "px");
+                    $(".it").val(size).focus();
+                    localStorage.setItem("localsize", size);
+                } else if (btn_index == 1) { // - 버튼
+                    size++;
+                    $("#txt_wrap").css("font-size", size + "px"); 
+                    $(".it").val(size).focus();
+                    localStorage.setItem("localsize", size);               
                 }
             });
+
+            // 글자크기를 필드에 입력하였을때
+            $(".it").on("keypress", function(e) {
+                if(e.keyCode == 13) {
+                    size = $(".it").val();
+                    $("#txt_wrap").css("font-size", size + "px");
+                    $(".it").val(size).focus();
+                    localStorage.setItem("localsize", size);
+                    
+                }
+            });    
         });
+        
     </script>
     <style type="text/css">
         .it{
@@ -49,9 +110,9 @@
         <dl>
             <dt>글자크기</dt>
             <dd class="zoom">
-                <button>+</button>
-                <input type="text" class="it">
                 <button>-</button>
+                <input type="text" class="it">
+                <button>+</button>
             </dd>
             <dt>글자모양</dt>
             <dd>
