@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../JS/jquery-3.6.1.js"></script>
+    <script type="text/javascript">
+        /*
+            toggle(): 선택한 요소가 보이면 숨기고, 숨겨져 있으면 보이게 하는 함수
+        */
+       $(function() {
+            $(".btn").on("click", function() {
+                $("img").toggle(1500);
+            })
+       });
+    </script>
+</head>
+<body>
+    <img src="../../images/img.jpg" alt="튤립이미지">
+    <br> <br> <br>
+    <button class="btn">Toggle</button>
+</body>
+</html>

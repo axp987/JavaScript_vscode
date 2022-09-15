@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../JS/jquery-3.6.1.js"></script>
+    <script type="text/javascript">
+        /*
+            - mouseenter() : 선택한 요소의 경계 범위 내에 마우스가
+                            올라갔을 때 이벤트
+                형식) $("요소선택").mouseenter(function() { .... };
+
+            - mouseleave() : 선택한 요소의 경계 범위 내에서 마우스가 떠나갔을 때
+                            이벤트 발생     
+                형식) $("요소선택").mouseenter(function() { .... };
+        */
+
+        $(function() {
+            $(".wrap").on("mouseenter", function() {
+                $("p").css("background-color", "blue");
+            });
+
+            $(".wrap").mouseleave(function() {
+                $("p").css("background-color", "yellow");
+            });
+        });
+    </script>
+    <style type="text/css">
+        * {
+            margin: 0px;
+            padding: 0px;
+
+        }
+
+        body {
+            margin: 20px;
+
+        }
+
+        .wrap {
+            background-color: #ccc;
+            padding: 10px;
+        }
+
+        p {
+            background-color: #999;
+        }
+    </style>
+</head>
+<body>
+   <div class = "wrap">
+        <p>내용</p>
+   </div> 
+</body>
+</html>

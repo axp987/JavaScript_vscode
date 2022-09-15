@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../JS/jquery-3.6.1.js"></script>
+    <script type="text/javascript">
+        /*
+            마우스 이벤트
+            - mouseout() : 마우스가 해당 버튼 영역을 벗어났을 때 발생하는 이벤트
+                형식) $("요소선택").on("mouseout", function())
+                      $("요소선택").mouseout(function(),)
+
+            - mouseover(): 마우스가 해당 버튼 영역에 올라갔을 때 발생하는 이벤트
+                형식) $("요소선택").on("mouseover", function())
+                      $("요소선택").mouseover(function(),)
+            - hover(): mouseout / mouseover 가 합쳐진 이벤트
+
+                형식) $("요소선택").hover (
+                    function() { ... }, ==> 마우스가 올라갔을 때 이벤트
+                    function() { ... }, ==> 마우스가 벗어났을 때 이벤트
+                );
+        */
+
+        $(function() {
+            // 마우스가 버튼 영역 위에 올라갔을 때 이벤트
+            $(".btn1").on("mouseover", function() {
+                $("p").css("background-color", "pink");
+            });
+
+            // 마우스가 버튼 영역을 벗어났을 때 이벤트
+            $(".btn1").mouseout(function() {
+                $("p").css("background-color", "lightgray");
+            });
+        });
+
+
+        // hover() : mouseover/mouseout 합쳐진 이벤트.
+        $(".btn2").hover(
+            function() { // mouseover 이벤트
+                $("p").css("border", "3px solid red");
+            },
+
+            function() { // mouseout 이벤트
+                $("p").css("border", "3px solid blue");
+            }
+        );
+    </script>
+</head>
+<body>
+    <button class="btn1">mouseover/out</button>
+    <button class="btn2">hover</button>
+    <br><br><br>
+    <p>내용</p>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../JS/jquery-3.6.1.js"></script>
+    <script type="text/javascript">
+        /*
+            효과 관련 함수
+            - hide(): 노출되어 있는 요소를 숨기는 기능을 하는 함수
+                형식) $("요소선택").hide(효과속도(ms), 콜백함수)
+                    *  콜백함수: 효과가 완료되면 실행하는 함수 
+                                ==> 생략도 가능
+            - show(): 숨겨져 있던 요소를 노출시키는 기능을 하는 함수
+                형식) $("요소선택").show(효과속도(ms), 콜백함수)
+        */
+
+        $(function() {
+            $(".btn1").on("click", function() {
+                $("h2").hide(2000, function() { // 2초 동안
+                    alert("글자 Off");
+                }) 
+            });
+
+            $(".btn1").on("click", function() {
+                $("h2").show(2000, function() { // 2초 동안
+                    alert("글자 On");
+                }) 
+            });
+        });
+    </script>
+</head>
+<body>
+    <h2> 효과 관련 내용 </h2>
+    <button class = "btn1">Hide</button>    
+    <button class = "btn2">Show</button>    
+</body>
+</html>
