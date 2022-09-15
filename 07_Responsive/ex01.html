@@ -7,6 +7,21 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <style type="text/css">
+            .themed-grid-col {
+            padding-top: .75rem;
+            padding-bottom: .75rem;
+            background-color: rgba(86, 61, 124, .15);
+            border: 1px solid rgba(86, 61, 124, .2);
+        }
+        
+        .themed-container {
+            padding: .75rem;
+            margin-bottom: 1.5rem;
+            background-color: rgba(0, 123, 255, .15);
+            border: 1px solid rgba(0, 123, 255, .2);
+        } 
+    </style>
 </head>
 <body>
         <button type="button" class="btn btn-primary">Primary</button>
@@ -31,5 +46,41 @@
         <button type="button" class="btn btn-link">Link</button>
     </div>
     
+
+    <div class="row mb-3">
+        <div class="col-4 themed-grid-col">.col-4</div>
+        <div class="col-4 themed-grid-col">.col-4</div>
+        <div class="col-4 themed-grid-col">.col-4</div>
+      </div>
+  
+      <div class="row mb-3">
+        <div class="col-sm-4 themed-grid-col">안녕</div>
+        <div class="col-sm-4 themed-grid-col">.col-sm-4</div>
+        <div class="col-sm-4 themed-grid-col">.col-sm-4</div>
+      </div>
+  
+      <div class="row mb-3">
+        <div class="col-md-4 themed-grid-col">.col-md-4</div>
+        <div class="col-md-4 themed-grid-col">.col-md-4</div>
+        <div class="col-md-4 themed-grid-col">.col-md-4</div>
+      </div>
+  
+      <div class="row mb-3">
+        <div class="col-lg-4 themed-grid-col">.col-lg-4</div>
+        <div class="col-lg-4 themed-grid-col">.col-lg-4</div>
+        <div class="col-lg-4 themed-grid-col">.col-lg-4</div>
+      </div>
+  
+      <div class="row mb-3">
+        <div class="col-xl-4 themed-grid-col">.col-xl-4</div>
+        <div class="col-xl-4 themed-grid-col">.col-xl-4</div>
+        <div class="col-xl-4 themed-grid-col">.col-xl-4</div>
+      </div>
+  
+      <div class="row mb-3">
+        <div class="col-xxl-4 themed-grid-col">.col-xxl-4</div>
+        <div class="col-xxl-4 themed-grid-col">.col-xxl-4</div>
+        <div class="col-xxl-4 themed-grid-col">.col-xxl-4</div>
+      </div>
 </body>
 </html>
