@@ -47,19 +47,40 @@
                     
             //     }
             // });
-            if(localStorage.getItem("family") == null) {
-                    
-                $("#fs").on("change", function() {
+            
+            
+            
+            // localStorage.setItem("family", $("#fs option:selected").text());
+            // localStorage.setItem("aa", $("#fs").val());
+            $("#fs").on("change", function() {
+                if(localStorage.getItem("aa") != null) { 
+                    localStorage.setItem("family", $("#fs option:selected").text()); 
+                    localStorage.setItem("aa", $("#fs").val());
+                    $("#fs options").html("checked");
+                    $("#txt_wrap").css("font-family", localStorage.getItem("aa"));
+                }
+                else {
+                    $("#fs").classList.add(HIDDEN_CLASSNAME);
+                    localStorage.setItem("family", $("#fs option:selected").text());    
+                    localStorage.setItem("aa", $("#fs").val());
                     $("#txt_wrap").css("font-family", $(this).val());
-                    localStorage.setItem("family", $("#fs option:selected").text());
-                });
-            }
-            else {
-                $("#fs").on("change", function() {
-
-                });
-                //$("#fs option:selected").val(localStorage.getItem("family"));
-            } 
+                }
+                
+            });
+            // if(localStorage.getItem("family") == null) {
+            //     $("#fs").on("change", function() {
+            //         $("#txt_wrap").css("font-family", $(this).val());
+            //         localStorage.setItem("family", $("#fs option:selected").text());
+            //     });
+            // }
+            // else {
+            //     let se = document.getElementById("fs");
+            //     $("#fs").on("change", function() {
+            //         localStorage.setItem("family", $("#fs option:selected").text());    
+            //     });
+            //     sele.innerHTML(localStorage.getItem("family"));
+            //     //$("#fs option:selected").val(localStorage.getItem("family"));
+            // } 
 
             
 
