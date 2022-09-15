@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../JS/jquery-3.6.1.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            // 초기값 설정
+            let size = 14; // 최초 글자 크기 선언
+
+            // 초기 글자크기 설정
+            $("#txt_wrap").css("font-size", size);
+            $(".it").val(size);
+            
+            // 1. 글자체를 선택했을 때 이벤트 처리
+            $("#fs").on("change", function() {
+                $("#txt_wrap").css("font-family", $(this).val())
+            });
+
+            // 2. 글자크기 버튼을 클릭시 이벤트 발생
+            $(".zoom button").on("click", function() {
+                // index(): 현재 요소가 부모의 몇번째
+                //          자식인지를 반환하는 메소드
+                let btn_index = $(".zoom button").index(this); // zoom button의 0, 1, 2요소
+
+                $("btn_index")
+
+                if(btn_index == 0) { // + 버튼
+                    size++;
+                    $("#txt_wrap").css("font-size", size + "px");
+                } else if (btn_index == 2) { // - 버튼
+                    size--;
+                    $("#txt_wrap").css("font-size", size + "px");                    
+                }
+            });
+        });
+    </script>
+    <style type="text/css">
+        .it{
+            width: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <dl>
+            <dt>글자크기</dt>
+            <dd class="zoom">
+                <button>+</button>
+                <input type="text" class="it">
+                <button>-</button>
+            </dd>
+            <dt>글자모양</dt>
+            <dd>
+                <select name="fs" id="fs">
+                    <option value="dotum, '돋움', san-serif">돋움</option>
+                    <option value="Gulim, '굴림', san-serif">굴림</option>
+                    <option value="magun gothic, '맑은고딕', san-serif">맑은고딕</option>
+                    <option value="GungsuChe, '궁서체', san-serif">궁서체</option>
+                </select>
+            </dd>
+        </dl>
+    </div><!-- id="wrap" -->
+    <p id="txt_wrap">
+        국회는 의원의 자격을 심사하며, 의원을 징계할 수 있다. 대통령이 궐위되거나 사고로 인하여 직무를 수행할 수 없을 때에는 국무총리, 법률이 정한 국무위원의 순서로 그 권한을 대행한다.
+        대통령의 선거에 관한 사항은 법률로 정한다. 위원은 탄핵 또는 금고 이상의 형의 선고에 의하지 아니하고는 파면되지 아니한다. 모든 국민은 행위시의 법률에 의하여 범죄를 구성하지 아니하는 행위로 소추되지 아니하며, 동일한 범죄에 대하여 거듭 처벌받지 아니한다.
+        대한민국의 국민이 되는 요건은 법률로 정한다. 모든 국민은 거주·이전의 자유를 가진다. 국회의 회의는 공개한다. 다만, 출석의원 과반수의 찬성이 있거나 의장이 국가의 안전보장을 위하여 필요하다고 인정할 때에는 공개하지 아니할 수 있다.
+        법관이 중대한 심신상의 장해로 직무를 수행할 수 없을 때에는 법률이 정하는 바에 의하여 퇴직하게 할 수 있다. 국가는 주택개발정책등을 통하여 모든 국민이 쾌적한 주거생활을 할 수 있도록 노력하여야 한다.
+        국가원로자문회의의 조직·직무범위 기타 필요한 사항은 법률로 정한다. 모든 국민은 소급입법에 의하여 참정권의 제한을 받거나 재산권을 박탈당하지 아니한다.
+    </p>
+</body>
+</html>
