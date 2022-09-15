@@ -99,4 +99,67 @@ $("#my_name").val(name);
 	
 ====================================================
 이벤트 및 애니메이션
+이벤트이름(목록)
+    blur, change, load, unload, resize,
+    scroll, select, submit, click, dblclick
+    mousedown, mouseup, mousemove, mouseover
+    mouseout, mouseleave, focus, keydown,
+    keypress, keyup, .....
+
+이벤트 형식
+$("요소선택").on("이벤트이름", 이벤트리스너);
+보통 무명클래스로 처리함
+$("button").on("click", function()) {
+	~~~~
+}
+//dblclick은 더블클릭(double)
+
+
+마우스 이벤트
+	- mouseout() : 마우스가 해당 버튼 영역을 벗어났을 때 발생하는 이벤트
+    형식) $("요소선택").on("mouseout", function())
+    	 $("요소선택").mouseout(function(),)
+
+    - mouseover(): 마우스가 해당 버튼 영역에 올라갔을 때 발생하는 이벤트
+    형식) $("요소선택").on("mouseover", function())
+          $("요소선택").mouseover(function(),)
+    - hover(): mouseout / mouseover 가 합쳐진 이벤트
+    형식) $("요소선택").hover (
+        function() { ... }, ==> 마우스가 올라갔을 때 이벤트
+        function() { ... }, ==> 마우스가 벗어났을 때 이벤트
+	);
+
+	- mouseenter() : 선택한 요소의 경계 범위 내에 마우스가
+                    올라갔을 때 이벤트
+    형식) $("요소선택").mouseenter(function() { .... };
+
+    - mouseleave() : 선택한 요소의 경계 범위 내에서 마우스가 떠나갔을 때
+                    이벤트 발생     
+    형식) $("요소선택").mouseenter(function() { .... };
+
+	mousemove(): 선택한 요소의 영역에서 마우스가
+    		  움직일 때마다 이벤트 발생
+	형식) $("요소선택").mousemove(fundction(매개변수) { .... });
+
+
+	 키보드 이벤트
+     - keypress(): 선택한 요소에서 키보드를 눌렀을 때 이벤트가 발생
+        형식) $("요소선택").keypress(function(매개변수)) { ... });
+
+     - keydown(): 선택한 요소에서 키보드를 눌렀을 때 이벤트가 발생
+        형식) $("요소선택").keydown(function(매개변수) { ... });
+
+     - keyup(): 선택한 요소에서 키보드에서 손을 떼었을 때 이벤트 발생
+        형식) $("요소선택").keyup(function(매개변수) { ... });
+
+    기타 자주 사용되는 이벤트 함수
+    - change() : 선택한 입력 요소에 값이 새 값으로 변경되고,
+         포커스가 다른 요소로 이동이 되었을 때 이벤트 발생
+
+        $(function () {
+            $(".site").on("change", function() {
+                $(".txt").text($(this).val());
+            });
+        });
+
 
