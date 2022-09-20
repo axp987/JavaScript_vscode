@@ -98,6 +98,8 @@ let name =  $("#user_name").val();
 $("#my_name").val(name);
 	
 ====================================================
+
+https://code.jquery.com/jquery-3.6.1.js
 이벤트 및 애니메이션
 이벤트이름(목록)
     blur, change, load, unload, resize,

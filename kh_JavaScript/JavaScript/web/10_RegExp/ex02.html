@@ -1,0 +1,46 @@
+<!-- https://curryyou.tistory.com/234 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../JS/jquery-3.6.1.js"></script>
+    <script type="text/javascript">
+        // blur 포커스를 빠져나왔을 때
+        $(function() {
+            $("#userId").on("blur", function() {
+                let value = $("#userId").val().trim();
+                let regexp = /^[A-Z][A-Za-z0-9]{3,}/;
+
+                if(regexp.test(value)) {
+                    alert("정규표현식에 맞는 아이디입니다.");
+                    $("#userPwd").focus();
+                }else {
+                   // alert("4글자 이상 또는 첫글자는 대문자, 영문자, 숫자로 입력해주세요.");
+                    
+                    //$("#userId").focus();
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div align="center">
+        <h2>회원 가입 폼 페이지</h2>
+        <form method="post" action="http://www.naver.com">
+            <!-- label 태그는 input 태그의 입력을 도와주는 태그-->
+            <p>
+                <label>아이디:<input type="text" id="userId" required></label><br>
+            </p>
+            <p>
+                비밀번호:<input type="password" id="userPwd" required><br>
+            </p>
+            <p>
+                <input type="button" value="가입">
+            </p>
+        </form>
+    </div>
+</body>
+</html>

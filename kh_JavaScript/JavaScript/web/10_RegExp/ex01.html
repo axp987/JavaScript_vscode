@@ -13,8 +13,8 @@
         // 432719(X)
 
         // 형식) : / 패턴 /
-        // 패턴유형: ^: 시작하라,  \d : 숫자형, {갯수}, $: 제한표시
-        //          | : OR
+        // 패턴유형: ^: 시작하라,  \d : 숫자형, {갯수}또는{이상, 이하}, $: 제한표시
+        //          | : OR, []: 기준, 
         // 우편번호 정규표현식
         let regexp_postal = /^\d{5}$/; // $: 5자리 까지만 받아라
         console.log(regexp_postal.test("34132")); // 정규표현식과 test가 동일하면 true 아니면 false
@@ -27,6 +27,16 @@
         console.log(regexp_mobile.test("010-2232-44s5"));
         console.log(regexp_mobile.test("010-2232-44553"));
         console.log(regexp_mobile.test("010-232-4453"));
+
+        // 아이디 정규표현식
+        // 4글자 이상, 첫글자는 대문자로 시작
+        // 영문자, 숫자만으로 구성
+        const regexp_userId = /^[A-Z][A-Za-z0-9]{3,}$/;
+        console.log(regexp_userId.test("4userTest"));
+        console.log(regexp_userId.test("UserTest"));
+
+
+
     </script>
 </head>
 <body>
