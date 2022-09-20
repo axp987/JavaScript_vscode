@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>문제해결 1</title>
+
+</head>
+
+<body>
+
+<script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+<style>
+
+form .btn {
+
+background-color: #4CAF50;
+
+color: white;
+
+padding: 10px 20px;
+
+border: none;
+
+cursor: pointer;
+
+width: 100px;
+
+margin-bottom: 10px;
+
+margin-top: 10px;
+
+}
+
+button.btn:hover {
+
+opacity: 0.8;
+
+color: yellow;
+
+}
+
+.cancel:hover {
+
+opacity: 0.8;
+
+background: red;
+
+}
+
+.btn cancel{
+    display: none;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h2>로그인을 클릭하면 로그인 폼이 나타납니다.</h2>
+
+<button class="open">로그인</button>
+
+<div class="form-popup" id="myForm">
+
+<form action="result.html" method="post">
+
+<fieldset id="field">
+
+<legend>로그인</legend>
+
+<h1>Login</h1>
+
+<label for="email"><b>Email</b></label>
+
+<input type="text" placeholder="Enter Email" name="email" required>
+
+<br>
+
+<label for="psw"><b>Password</b></label>
+
+<input type="password" placeholder="Enter Password" name="psw" required>
+
+<br>
+
+<button type="submit" class="btn">Login</button>
+
+<button type="button" class="btn">Close</button>
+
+</fieldset>
+
+</form>
+
+</div>
+
+<script type="text/javascript">
+    $(function() {
+        $(".form-popup").hide();
+    
+        $(".open").on("click", function() {
+            $(".form-popup").show();
+            
+            $("#field").css("display","inline-block")
+                    .css("width", "80px");
+              
+            // $("button").click(function() {
+            //     $("#myForm").css('display', 'none');
+            // });
+            
+            // $("btn cancel").click(function() {
+            //     $("#myForm").css('display', 'none');
+            // });
+        });
+        
+        $(".btn").on("click", function() {
+            $(".form-popup").hide();
+        })
+    });
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+
+<meta charset="UTF-8">
+
+<script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+<title>체크리스트 1</title>
+
+<style>
+
+form ul{list-style: none;}
+
+form ul>li{text-align:right;width:100px;
+
+display: inline-block; margin-right:5px}
+
+form li:last-child{
+
+width:300px;
+
+text-align: center;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<form method="post" action="result.html">
+
+<fieldset>
+
+<legend>회원가입</legend>
+
+<ul>
+
+<li><label>아이디</label></li>
+
+<li><input type="text" name='userId' id="userId" size='10' required></li>
+
+<br>
+
+<li><label>패스워드</label></li>
+
+<li><input type="password" name='password' id="password" size='10' required></li>
+
+<span id="out"></span>
+
+<br>
+
+<li><label>패스워드확인</label></li>
+
+<li><input type="password" id="check_pw" size='10' required></li>
+
+<br>
+
+<li><label>이름</label></li>
+
+<li><input type="text" name='userName' id="userName" size='10' required></li>
+
+<br>
+
+<li>성별</li>
+
+<li><label>남<input type="radio" name='gender' class="gender1" value="M"></label>   
+
+<label>여<input type="radio" name='gender' class="gender1" value="F"></label></li>
+
+<br>
+
+<li><label>이메일</label></li>
+
+<li><input type="email" name='email' id="email" size='10' required></li>
+
+<br><br>
+
+<li>
+
+<input type="submit" value="회원가입" id="btn">   
+
+<input type="reset" value="취소">
+
+</li>
+
+</ul>
+
+</fieldset>
+
+</form>
+
+<script type="text/javascript">
+    $(function() {
+        $("#userId").on("blur", function() {
+            let id = $("#userId").val().trim();
+            let checkId = /^[A-Z][A-Za-z0-9]{3,}/;
+
+            if(checkId.test(id)) {
+            }
+            else {
+                alert("4글자이상, 첫글자는 대문자이고 영문자,숫자만 가능");
+		 		$("#userId").val("");
+            } //id_if
+
+            
+        }); 
+        
+        $("#check_pw").keydown(function(e) {
+            if($("#password").val().trim() == "") {
+                alert("패스워드를 입력해주세요.");
+                $("#password").focus();
+                e.val("");
+                $("#check_pw").val();
+            }
+        });
+    });
+
+    $("label").on("click", function() {
+            $("#userId").focus();
+    });
+
+    $("#btn").on("click", function() {
+        console.log($(".gender1").selector());
+    });
+</script>
+
+</body>
+
+</html>
