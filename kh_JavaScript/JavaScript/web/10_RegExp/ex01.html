@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        // 우편번호 체크
+        // 35213(O)
+        // D1234(X)
+        // 4327(X)
+        // 432719(X)
+
+        // 형식) : / 패턴 /
+        // 패턴유형: ^: 시작하라,  \d : 숫자형, {갯수}, $: 제한표시
+        //          | : OR
+        // 우편번호 정규표현식
+        let regexp_postal = /^\d{5}$/; // $: 5자리 까지만 받아라
+        console.log(regexp_postal.test("34132")); // 정규표현식과 test가 동일하면 true 아니면 false
+        console.log(regexp_postal.test("D4132"));
+
+        // 핸드폰번호 정규표현식
+        //      3자리 or 4자리
+        const regexp_mobile = /^(010)-(\d{3}|\d{4})-(\d{4})$/;
+        console.log(regexp_mobile.test("010-2232-4435"));
+        console.log(regexp_mobile.test("010-2232-44s5"));
+        console.log(regexp_mobile.test("010-2232-44553"));
+        console.log(regexp_mobile.test("010-232-4453"));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
