@@ -36,6 +36,26 @@ margin-top: 10px;
 
 }
 
+form .btnc {
+
+background-color: #4CAF50;
+
+color: white;
+
+padding: 10px 20px;
+
+border: none;
+
+cursor: pointer;
+
+width: 100px;
+
+margin-bottom: 10px;
+
+margin-top: 10px;
+
+}
+
 button.btn:hover {
 
 opacity: 0.8;
@@ -103,25 +123,16 @@ background: red;
         $(".form-popup").hide();
     
         $(".open").on("click", function() {
-            $(".form-popup").show();
+            $(".form-popup").toggle();
             
-            $("#field").css("display","inline-block")
-                    .css("width", "80px");
-              
-            // $("button").click(function() {
-            //     $("#myForm").css('display', 'none');
-            // });
-            
-            // $("btn cancel").click(function() {
-            //     $("#myForm").css('display', 'none');
-            // });
+            // $("#field").css("display","inline-block")
+            //         .css("width", "80px");
         });
         
         $(".btn").on("click", function() {
             $(".form-popup").hide();
         })
     });
-
 </script>
 
 </body>

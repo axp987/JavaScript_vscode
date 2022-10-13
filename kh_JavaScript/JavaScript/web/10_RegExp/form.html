@@ -110,12 +110,13 @@ text-align: center;
             
         }); 
         
-        $("#check_pw").keydown(function(e) {
+        $("#check_pw").keyup(function(e) {
             if($("#password").val().trim() == "") {
                 alert("패스워드를 입력해주세요.");
                 $("#password").focus();
                 e.val("");
-                $("#check_pw").val();
+                $("#check_pw").val("");
+                
             }
         });
     });
